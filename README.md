@@ -1,0 +1,2 @@
+# myfirstrepositori
+pertama kali 
