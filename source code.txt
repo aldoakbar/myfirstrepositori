@@ -1,0 +1,134 @@
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+using namespace std;
+main(){
+float uts,uas,tugas,absen;
+float huas,huts,htugas,habsen,totalnilai;
+cout<<"===menghitung nilai akhir==="<<endl;
+cout<<" masukan nilai uas       :";cin>>uas;
+cout<<" masukan nilai uts       :";cin>>uts;
+cout<<" masukan nilai tugas     :";cin>>tugas;
+cout<<" masukan nilai absen     :";cin>>absen;
+huas=uas*20/100;
+huts=uts*30/100;
+htugas=tugas*35/100;
+habsen=absen*15/100;
+cout<<"nilai uas        :"<<huas<<endl;
+cout<<"nilai uts        :"<<huts<<endl;
+cout<<"nilai tugas      :"<<htugas<<endl;
+cout<<"nilai absen      :"<<habsen<<endl;
+totalnilai=huas+huts+htugas+habsen;
+cout<<"total nilai  :"<<totalnilai<<endl;
+if(totalnilai>=81){
+    cout<<"anda mendapat nilai *A*"<<endl;
+}
+else if(totalnilai>=61){
+    cout<<"anda mendapat nilai *B*"<<endl;
+}
+else if(totalnilai>=41){
+    cout<<"anda mendapat nilai *C*"<<endl;
+}
+else if(totalnilai>=21){
+    cout<<"anda mendapat nilai *D*"<<endl;
+}
+else if(totalnilai>=0){
+    cout<<"anda mendapat nilai *E*"<<endl;
+}
+}
+============
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+using namespace std;
+double input(string text){
+double input;
+cout<<" masukan nilai "<<text<<": ";cin>>input;
+return input;
+}
+void grade(double totalnilai){
+    if(totalnilai>=81){
+    cout<<"anda mendapat nilai *A*"<<endl;
+    }
+    else if(totalnilai>=61){
+    cout<<"anda mendapat nilai *B*"<<endl;
+    }
+    else if(totalnilai>=41){
+    cout<<"anda mendapat nilai *C*"<<endl;
+    }
+    else if(totalnilai>=21){
+    cout<<"anda mendapat nilai *D*"<<endl;
+    }
+    else if(totalnilai>=0){
+    cout<<"anda mendapat nilai *E*"<<endl;
+    }
+}
+
+main(){
+double huas,huts,htugas,habsen,totalnilai;
+string text;
+huas=input("uas");
+huts=input("uts");
+htugas=input("tugas");
+habsen=input("absen");
+cout<<"nilai uas        :"<<huas<<endl;
+cout<<"nilai uts        :"<<huts<<endl;
+cout<<"nilai tugas      :"<<htugas<<endl;
+cout<<"nilai absen      :"<<habsen<<endl;
+totalnilai=(huas*20/100)+(huts*30/100)+(htugas*35/100)+(habsen*15/100);
+cout<<"total nilai  :"<<totalnilai<<endl;
+grade(totalnilai);
+}
+==============
+#include <iostream>
+#include <conio.h>
+#include <stdio.h>
+using namespace std;
+
+double input(string text){
+double input;
+cout<<" masukan nilai "<<text<<": ";cin>>input;
+return input;
+}
+void grade(double totalnilai){
+    if(totalnilai>=81){
+    cout<<"anda mendapat nilai *A*"<<endl;
+    }
+    else if(totalnilai>=61){
+    cout<<"anda mendapat nilai *B*"<<endl;
+    }
+    else if(totalnilai>=41){
+    cout<<"anda mendapat nilai *C*"<<endl;
+    }
+    else if(totalnilai>=21){
+    cout<<"anda mendapat nilai *D*"<<endl;
+    }
+    else if(totalnilai>=0){
+    cout<<"anda mendapat nilai *E*"<<endl;
+    }
+}
+
+main(){
+    struct Nilaiakhir{
+    double huas,huts,htugas,habsen,totalnilai;
+    float uts,uas,tugas,absen;
+    string text;
+    };
+Nilaiakhir na;
+    cout<<"===MENGHITUNG NILAI AKHIR==="<<endl;
+    na.uas=input("uas");
+    na.uts=input("uts");
+    na.tugas=input("tugas");
+    na.absen=input("absen");
+    na.huas=na.uas*20/100;
+    na.huts=na.uts*30/100;
+    na.htugas=na.tugas*35/100;
+    na.habsen=na.absen*15/100;
+    cout<<"nilai uas        :"<<na.huas<<endl;
+    cout<<"nilai uts        :"<<na.huts<<endl;
+    cout<<"nilai tugas      :"<<na.htugas<<endl;
+    cout<<"nilai absen      :"<<na.habsen<<endl;
+    na.totalnilai=(na.huas)+(na.huts)+(na.htugas)+(na.habsen);
+    cout<<"total nilai  :"<<na.totalnilai<<endl;
+    grade(na.totalnilai);
+    }
